@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyHealth : MonoBehaviour
+{
+    public float Health = 2;
+    public float maxHealth = 2;
+    public Healthbar healthbar;
+    //[SerializeField]private GameObject currentHealth;
+    // Start is called before the first frame update
+    void Start()
+    {
+        Health = maxHealth;
+        healthbar.UpdateHealthBar(Health, maxHealth);
+        //currentHealth = GetComponentInChildren<GameObject>();
+    }
+
+    public void takeDamage(float damageAmount){
+        //currentHealth.gameObject.SetActive(true);
+        Health -= damageAmount;
+        //healthbar.UpdateHealthBar(Health, maxHealth);
+        if(Health <= 0){
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision){
+        if (collision.gameObject.tag == "Bullet"){
+            Destroy(collision.gameObject);
+            takeDamage(1);
+        }
+    }
+
+}
