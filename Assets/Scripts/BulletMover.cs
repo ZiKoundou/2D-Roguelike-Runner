@@ -18,9 +18,9 @@ public class BulletMover : MonoBehaviour
     {   
         transform.position += (Vector3.up*shotSpeed)*Time.deltaTime;
         timer += Time.deltaTime;
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if(timer >= lifetime){
-            Debug.Log("destroy");
+            //Debug.Log("destroy");
             Destroy(gameObject);
         }
     }

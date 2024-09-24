@@ -12,15 +12,18 @@ public class Healthbar : MonoBehaviour
     // Start is called before the first frame update
     public void UpdateHealthBar(float currentValue, float maxValue){
         
-        
+        Debug.Log("Current Health: " + currentValue + ", Max Health: " + maxValue);
         slider.gameObject.SetActive(currentValue < maxValue);
-        slider.value = currentValue;
         slider.maxValue = maxValue;
+        slider.value = currentValue;
+        
         slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low,High,slider.normalizedValue);
+        //Debug.Log("Slider Normalized Value: " + slider.normalizedValue);
+
     }
 
     void Update(){
-        //slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position = Offset);
+        //slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + Offset);
     }
     
     // Update is called once per frame

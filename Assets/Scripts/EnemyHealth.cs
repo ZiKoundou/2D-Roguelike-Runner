@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        healthbar = GetComponentInChildren<Healthbar>();
         Health = maxHealth;
         healthbar.UpdateHealthBar(Health, maxHealth);
         //currentHealth = GetComponentInChildren<GameObject>();
@@ -19,7 +20,7 @@ public class EnemyHealth : MonoBehaviour
     public void takeDamage(float damageAmount){
         //currentHealth.gameObject.SetActive(true);
         Health -= damageAmount;
-        //healthbar.UpdateHealthBar(Health, maxHealth);
+        healthbar.UpdateHealthBar(Health, maxHealth);
         if(Health <= 0){
             Destroy(gameObject);
         }
