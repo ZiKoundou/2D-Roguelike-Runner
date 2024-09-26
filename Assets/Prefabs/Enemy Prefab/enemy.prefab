@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd68fff4803a23489fa4e48c5df9837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FloatingTextPrefab: {fileID: 6906995522396207621, guid: fb6eb7c603790354c923171c3e68b07b, type: 3}
   Health: 2
   maxHealth: 2
   healthbar: {fileID: 4376627869833856543}
