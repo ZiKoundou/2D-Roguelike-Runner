@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerupSpawner : MonoBehaviour
 {
     public GameObject powerup;
-    public float spawnRate = 2;
+    public float spawnRate = 25;
     public float timer = 0;
     public float lengthOffset = 5;
     void Start()
