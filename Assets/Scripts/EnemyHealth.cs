@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     public float Health = 2;
     public float maxHealth = 2;
     public Healthbar healthbar;
+
+    
     //[SerializeField]private GameObject currentHealth;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,7 @@ public class EnemyHealth : MonoBehaviour
         healthbar = GetComponentInChildren<Healthbar>();
         Health = maxHealth;
         healthbar.UpdateHealthBar(Health, maxHealth);
+        
         //currentHealth = GetComponentInChildren<GameObject>();
     }
     void ShowFloatingText(float damageAmount){

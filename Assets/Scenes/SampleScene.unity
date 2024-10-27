@@ -986,6 +986,10 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2157144525264453721, guid: 102df910a9fcafb4bbd0851c61488eb3, type: 3}
+      propertyPath: recoveryForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4727669040876722505, guid: 102df910a9fcafb4bbd0851c61488eb3, type: 3}
       propertyPath: shotRate
       value: 1

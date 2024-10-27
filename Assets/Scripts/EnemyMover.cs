@@ -13,7 +13,7 @@ public class EnemyMover : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position = transform.position +(Vector3.down*moveSpeed)*Time.deltaTime;
         if(transform.position.y < deadZone){

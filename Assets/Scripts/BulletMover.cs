@@ -5,7 +5,9 @@ using UnityEngine;
 public class BulletMover : MonoBehaviour
 {
     public float shotSpeed;
+    //public float damage = 1f;
     private float lifetime = 5;
+    
     float timer = 0;
     // Start is called before the first frame update
     void Start()
