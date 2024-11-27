@@ -1,36 +1,71 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3827687134950803293
+--- !u!1 &2365714378891030247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6454636429508561282}
+  - component: {fileID: -6721366579313406812}
+  m_Layer: 0
+  m_Name: Wave p1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6454636429508561282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365714378891030247}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 280615419262285165}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6721366579313406812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365714378891030247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a0a68a878d4a24d967399edfb78276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  deadzone: -7
+--- !u!1001 &7697507096389214208
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 6454636429508561282}
     m_Modifications:
     - target: {fileID: 2033503336365184488, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
       propertyPath: m_Name
-      value: MajorHealthPowerup Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084801652310020766, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
-      propertyPath: m_Color.b
-      value: 0.45479777
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084801652310020766, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
-      propertyPath: m_Color.g
-      value: 0.690566
-      objectReference: {fileID: 0}
-    - target: {fileID: 4084801652310020766, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
-      propertyPath: m_Color.r
-      value: 0.25407606
+      value: HealthPowerup
       objectReference: {fileID: 0}
     - target: {fileID: 7581805400282092909, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7581805400282092909, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.88
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7581805400282092909, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -64,12 +99,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8161205224445299389, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
-      propertyPath: powerupEffect
-      value: 
-      objectReference: {fileID: 11400000, guid: 751be8d56f8537e49af7f3feac266d51, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
+--- !u!4 &280615419262285165 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7581805400282092909, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
+  m_PrefabInstance: {fileID: 7697507096389214208}
+  m_PrefabAsset: {fileID: 0}

@@ -11,26 +11,44 @@ public class WaveSpawner : MonoBehaviour
     private int waveNumber;
     public float timer = 0;
     public float spawnRate = 5;
+
+    public int waveCount = 0;
     void Start()
     {
-        RandomizeWave();
+        RandomizeWave("normal");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timer<spawnRate){
+        if(timer < spawnRate){
             timer += Time.deltaTime;
-        }else{
-            
+
+        }else if (waveCount == 2){
             Instantiate(Wave,transform.position,transform.rotation);
-            RandomizeWave();
+            RandomizeWave("powerup");
+            waveCount = 0;
+            timer = 0;
+            if(spawnRate >= 2.5f){
+                spawnRate -= 0.5f;
+            }
+
+        } else if (waveCount < 2){
+            Instantiate(Wave,transform.position,transform.rotation);
+            RandomizeWave("normal");
+            waveCount += 1;
             timer = 0;
         }
     }
 
-    void RandomizeWave(){
-        waveNumber = Random.Range(1,maxWaveNumber);
-        Wave = Resources.Load<GameObject>($"Prefabs/WavePrefabs/Wave {waveNumber}");
+    void RandomizeWave(string type){
+        if(type == "powerup"){
+            waveNumber = Random.Range(1,maxWaveNumber);
+            Wave = Resources.Load<GameObject>($"Prefabs/WavePrefabs/Wave p{waveNumber}");
+        }else if (type == "normal"){
+            waveNumber = Random.Range(1,maxWaveNumber);
+            Wave = Resources.Load<GameObject>($"Prefabs/WavePrefabs/Wave {waveNumber}");
+        }
+        
     }
 }

@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4957257477537314808, guid: aa96d11d1223ce54a8dd46f0d37ff7d4, type: 3}
       propertyPath: m_Name
-      value: No Powerup Variant
+      value: SpeedPowerup
       objectReference: {fileID: 0}
     - target: {fileID: 6936637019489759374, guid: aa96d11d1223ce54a8dd46f0d37ff7d4, type: 3}
       propertyPath: m_Color.b
@@ -67,6 +67,16 @@ PrefabInstance:
     - target: {fileID: 6936637019489759374, guid: aa96d11d1223ce54a8dd46f0d37ff7d4, type: 3}
       propertyPath: m_Color.r
       value: 0.3679244
+      objectReference: {fileID: 0}
+    - target: {fileID: 9003377762121278105, guid: aa96d11d1223ce54a8dd46f0d37ff7d4, type: 3}
+      propertyPath: m_text
+      value: 'Speed up
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9003377762121278105, guid: aa96d11d1223ce54a8dd46f0d37ff7d4, type: 3}
+      propertyPath: m_fontSize
+      value: 3.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
