@@ -160,7 +160,7 @@ MonoBehaviour:
   horizontal: 0
   speed: 5
   recoveryForce: 2
-  centerYPosition: -3
+  centerYPosition: -4
   yTolerance: 0.5
 --- !u!114 &2739233639173334587
 MonoBehaviour:
