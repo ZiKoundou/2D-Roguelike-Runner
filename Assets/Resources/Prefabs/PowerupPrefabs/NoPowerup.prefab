@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2033503336365184488, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
       propertyPath: m_Name
-      value: No Powerup
+      value: NoPowerup
       objectReference: {fileID: 0}
     - target: {fileID: 2594548050198200457, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
       propertyPath: m_text
@@ -24,15 +24,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4084801652310020766, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
       propertyPath: m_Color.b
-      value: 0.33773577
+      value: 0.20409392
       objectReference: {fileID: 0}
     - target: {fileID: 4084801652310020766, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
       propertyPath: m_Color.g
-      value: 0.9395552
+      value: 0.5235966
       objectReference: {fileID: 0}
     - target: {fileID: 4084801652310020766, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.554717
       objectReference: {fileID: 0}
     - target: {fileID: 7581805400282092909, guid: 67934ab291707504abaf5aad879fd07a, type: 3}
       propertyPath: m_LocalPosition.x
