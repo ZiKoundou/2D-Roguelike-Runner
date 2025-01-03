@@ -1,11 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class statController : MonoBehaviour
 {
     // Start is called before the first frame update
-    
+    [SerializeField]
+    private float moveSpeed;
+    private float maxhealth;
+    private float currenthealth;
+    private float shotRate;
+    //not in player script
+    private float shotSpeed;
+    private float damage;
+    private UnityEngine.Vector3 playerSize;
+    private UnityEngine.Vector3 shotSize;
+    private float defense;
+    private float vitality;
+    private float lifesteal;
+
+
+    public float GetHealth(){
+        return currenthealth;
+    }
+
+    public float GetMoveSpeed(){
+        return moveSpeed;
+    }
+
+    public void SetMoveSpeed(float newSpeed){
+        moveSpeed = newSpeed;
+    }
+
     void Start()
     {
         

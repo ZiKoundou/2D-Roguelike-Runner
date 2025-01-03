@@ -6,10 +6,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public statController statController;
 
     public Rigidbody2D rb;
     public float horizontal;
-    public float speed = 8f;
+    //public float speed = 8f;
     //public float damage = 1f;
     private bool isFacingRight = true;
     
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerAnimator = gameObject.GetComponent<Animator>();
+
         
     }
 
@@ -30,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         if(OffCenter()){
             rb.AddForce(new Vector3(0,1,0) * recoveryForce, ForceMode2D.Force);
         }
-        rb.velocity = new Vector2(horizontal* speed,0f);
+        rb.velocity = new Vector2(horizontal * statController.GetMoveSpeed(),0f);
         //playerAnimator.speed = speed/5;
         if(!isFacingRight && horizontal > 0f){
             Flip();

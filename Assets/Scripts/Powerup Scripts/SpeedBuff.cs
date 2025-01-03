@@ -7,6 +7,8 @@ public class SpeedBuff : PowerupEffect
 {   
     public float amount;
     public override void Apply(GameObject target){
-        target.GetComponent<PlayerMovement>().speed += amount;
+        //get set speed value and apply new amount to it :)
+        float newAmount = target.GetComponent<statController>().GetMoveSpeed() + amount;
+        target.GetComponent<statController>().SetMoveSpeed(newAmount);
     }
 }

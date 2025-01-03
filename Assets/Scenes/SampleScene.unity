@@ -227,6 +227,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b72047ebe6421fe449b12c07c58e1655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 2.5
+  maxhealth: 0
+  currenthealth: 0
+  shotRate: 0
+  shotSpeed: 0
+  damage: 0
+  playerSize: {x: 0, y: 0, z: 0}
+  shotSize: {x: 0, y: 0, z: 0}
+  defense: 0
+  vitality: 0
+  lifesteal: 0
 --- !u!4 &360640332
 Transform:
   m_ObjectHideFlags: 0
@@ -1519,6 +1530,10 @@ PrefabInstance:
       propertyPath: recoveryForce
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2157144525264453721, guid: 102df910a9fcafb4bbd0851c61488eb3, type: 3}
+      propertyPath: statController
+      value: 
+      objectReference: {fileID: 360640331}
     - target: {fileID: 2157144525264453721, guid: 102df910a9fcafb4bbd0851c61488eb3, type: 3}
       propertyPath: centerYPosition
       value: -4
