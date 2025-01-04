@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector3(0,1,0) * recoveryForce, ForceMode2D.Force);
         }
         rb.velocity = new Vector2(horizontal * statController.GetMoveSpeed(),0f);
+        //Debug.Log(statController.GetMoveSpeed());
         //playerAnimator.speed = speed/5;
         if(!isFacingRight && horizontal > 0f){
             Flip();

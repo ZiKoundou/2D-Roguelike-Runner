@@ -7,10 +7,7 @@ public class statController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    private float moveSpeed;
-    private float maxhealth;
-    private float currenthealth;
-    private float shotRate;
+    private float moveSpeed, maxHealth, currentHealth, shotRate;
     //not in player script
     private float shotSpeed;
     private float damage;
@@ -22,14 +19,14 @@ public class statController : MonoBehaviour
 
 
     public float GetHealth(){
-        return currenthealth;
+        return currentHealth;
     }
 
     public float GetMoveSpeed(){
         return moveSpeed;
     }
 
-    public void SetMoveSpeed(float newSpeed){
+    public void SetMoveSpeed(float newSpeed)            {
         moveSpeed = newSpeed;
     }
 
