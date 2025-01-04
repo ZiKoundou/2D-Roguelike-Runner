@@ -9,18 +9,20 @@ public class Shoot : MonoBehaviour
     public Transform shootingPoint;
     public GameObject bullet;
 
-    public float shotRate = 1f;
+    statController statController;
+    float shotRate;
     public float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
         playerAnimator = gameObject.GetComponent<Animator>();
+        statController  = GetComponentInParent<statController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        shotRate = statController.GetshotRate();
         if(Input.GetKey(KeyCode.Mouse0) && timer<=0 && playerAnimator.GetBool("isShooting") == false){
             
             shoot();

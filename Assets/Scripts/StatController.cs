@@ -7,8 +7,9 @@ public class statController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    private float moveSpeed, maxHealth, currentHealth, shotRate;
+    private float moveSpeed, maxHealth,  shotRate;
     //not in player script
+    private float currentHealth;
     private float shotSpeed;
     private float damage;
     private UnityEngine.Vector3 playerSize;
@@ -30,7 +31,9 @@ public class statController : MonoBehaviour
     public float GetMoveSpeed(){
         return moveSpeed;
     }
-
+    public float GetshotRate(){
+        return shotRate;
+    }
     public void SetMoveSpeed(float newSpeed)            {
         moveSpeed = newSpeed;
     }
@@ -42,9 +45,14 @@ public class statController : MonoBehaviour
         }
     }
 
+    public void SetMaxHealth(float health){
+        maxHealth = health;
+        
+    }
+
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame

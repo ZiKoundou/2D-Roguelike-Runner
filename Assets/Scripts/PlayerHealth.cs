@@ -7,11 +7,13 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     private float Health;
     private float maxHealth;
-    statController statController;
+    [SerializeField]statController statController;
     [SerializeField] PlayerHealthbar healthbar;
+    
     void Start(){
-        statController = GetComponentInParent<statController>();
-        
+        // Ensure statController is assigned
+        CheckStatController();
+
     }
     void Update()
     {
@@ -37,4 +39,33 @@ public class PlayerHealth : MonoBehaviour
             takeDamage(1f);
         }
     }
+    void CheckStatController(){
+        if (statController == null)
+        {
+            statController = GetComponentInParent<statController>();
+            if (statController == null)
+            {
+                Debug.LogError("statController not found on parent!");
+                return;
+            }
+        }
+    }
+
+    void ResetHealth(){
+        maxHealth = statController.GetMaxHealth();
+        Health = maxHealth;
+        statController.SetHealth(Health);
+    }
+
+    void CheckHealthBar(){
+        if (healthbar != null)
+        {
+            healthbar.UpdateHealthBar(Health, maxHealth);
+        }
+        else
+        {
+            Debug.LogWarning("Healthbar reference not assigned in PlayerHealth.");
+        }
+    }
+
 }
