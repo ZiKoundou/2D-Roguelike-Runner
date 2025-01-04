@@ -6,11 +6,15 @@ using UnityEngine;
 public class HealthBuff : PowerupEffect
 {   
     public float amount;
+    
     public override void Apply(GameObject target)
     {
-        if(target.GetComponent<PlayerHealth>().maxHealth != target.GetComponent<PlayerHealth>().Health){
-            target.GetComponent<PlayerHealth>().Health += amount;
+        float health = target.GetComponentInParent<statController>().GetHealth();
+        if(target.GetComponentInParent<statController>().GetMaxHealth() != health){
+            health += amount;
+            target.GetComponentInParent<statController>().SetHealth(health);
         }
+        
         
     }
 }

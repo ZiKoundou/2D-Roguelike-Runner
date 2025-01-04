@@ -22,12 +22,24 @@ public class statController : MonoBehaviour
         return currentHealth;
     }
 
+    
+    public float GetMaxHealth(){
+        return maxHealth;
+    }
+
     public float GetMoveSpeed(){
         return moveSpeed;
     }
 
     public void SetMoveSpeed(float newSpeed)            {
         moveSpeed = newSpeed;
+    }
+
+    public void SetHealth(float health){
+        currentHealth = health;
+        if(currentHealth >= maxHealth){
+            currentHealth = maxHealth;
+        }
     }
 
     void Start()

@@ -330,8 +330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2.5
-  maxHealth: 0
-  currentHealth: 0
+  maxHealth: 3
+  currentHealth: 3
   shotRate: 0
 --- !u!4 &360640332
 Transform:
@@ -1846,6 +1846,7 @@ GameObject:
   - component: {fileID: 1804978943}
   - component: {fileID: 1804978945}
   - component: {fileID: 1804978944}
+  - component: {fileID: 1804978946}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -1892,7 +1893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Health: <color=black>100</color>
+  m_text: 'Health:
 
 '
   m_isRightToLeft: 0
@@ -1971,6 +1972,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804978942}
   m_CullTransparentMesh: 1
+--- !u!114 &1804978946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804978942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41315b5c2ffa62649821f660f734cce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2067398083
 GameObject:
   m_ObjectHideFlags: 0

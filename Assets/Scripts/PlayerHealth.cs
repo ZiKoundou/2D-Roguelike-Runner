@@ -5,11 +5,18 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float Health;
-    public float maxHealth;
+    private float Health;
+    private float maxHealth;
+    statController statController;
     [SerializeField] PlayerHealthbar healthbar;
+    void Start(){
+        statController = GetComponentInParent<statController>();
+        
+    }
     void Update()
     {
+        Health = statController.GetHealth();
+        maxHealth = statController.GetMaxHealth();
         healthbar.UpdateHealthBar(Health, maxHealth);
         //healthbar = GetComponentInChildren<Healthbar>();
     }
@@ -17,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
     public void takeDamage(float damageAmount){
         //health.gameObject.SetActive(true);
         Health -= damageAmount;
+        statController.SetHealth(Health);
         healthbar.UpdateHealthBar(Health, maxHealth);
         if(Health <= 0){
             Destroy(gameObject);
