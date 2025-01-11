@@ -36,8 +36,10 @@ public class Shoot : MonoBehaviour
         
     }
     void shoot(){
+        float playerDamage = statController.GetDamage();
         playerAnimator.SetBool("isShooting", true);
-        Instantiate(bullet, shootingPoint.position,transform.rotation);
+        GameObject instantiatedBullet = Instantiate(bullet, shootingPoint.position,transform.rotation);
+        instantiatedBullet.GetComponent<BulletMover>().SetDamage(playerDamage);
     }
     void resetShot(){
         playerAnimator.SetBool("isShooting", false);

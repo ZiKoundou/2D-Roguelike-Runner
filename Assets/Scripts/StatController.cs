@@ -11,6 +11,7 @@ public class statController : MonoBehaviour
     //not in player script
     private float currentHealth;
     private float shotSpeed;
+    [SerializeField]
     private float damage;
     private UnityEngine.Vector3 playerSize;
     private UnityEngine.Vector3 shotSize;
@@ -27,7 +28,9 @@ public class statController : MonoBehaviour
     public float GetMaxHealth(){
         return maxHealth;
     }
-
+    public float GetDamage(){
+        return damage;
+    }
     public float GetMoveSpeed(){
         return moveSpeed;
     }

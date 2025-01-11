@@ -42,11 +42,12 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
-        if (collision.gameObject.tag == "Bullet"){
-            Destroy(collision.gameObject);
-            takeDamage(1);
-        }
-    }
+    // private void OnCollisionEnter2D(Collision2D collision){
+    //     if (collision.gameObject.tag == "Bullet"){
+    //         takeDamage(collision.gameObject.damage);
+    //         Destroy(collision.gameObject);
+            
+    //     }
+    // }
 
 }
