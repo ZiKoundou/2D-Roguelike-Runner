@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletMover : MonoBehaviour
 {
-    public float shotSpeed;
+    private float shotSpeed;
     //public float damage = 1f;
     private float lifetime = 5;
     private float damage;
@@ -19,6 +19,9 @@ public class BulletMover : MonoBehaviour
 
     public void SetDamage(float Damage){
         damage = Damage;
+    }
+    public void SetShotSpeed(float ShotSpeed){
+        shotSpeed = ShotSpeed;
     }
 
     // Update is called once per frame

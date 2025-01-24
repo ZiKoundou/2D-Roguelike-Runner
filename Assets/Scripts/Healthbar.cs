@@ -12,7 +12,7 @@ public class Healthbar : MonoBehaviour
     // Start is called before the first frame update
     public void UpdateHealthBar(float currentValue, float maxValue){
         
-        Debug.Log("Current Health: " + currentValue + ", Max Health: " + maxValue);
+        //Debug.Log("Current Health: " + currentValue + ", Max Health: " + maxValue);
         slider.gameObject.SetActive(currentValue < maxValue);
         slider.maxValue = maxValue;
         slider.value = currentValue;

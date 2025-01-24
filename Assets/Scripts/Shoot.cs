@@ -37,9 +37,11 @@ public class Shoot : MonoBehaviour
     }
     void shoot(){
         float playerDamage = statController.GetDamage();
+        float playerShotSpeed = statController.GetShotSpeed();
         playerAnimator.SetBool("isShooting", true);
         GameObject instantiatedBullet = Instantiate(bullet, shootingPoint.position,transform.rotation);
         instantiatedBullet.GetComponent<BulletMover>().SetDamage(playerDamage);
+        instantiatedBullet.GetComponent<BulletMover>().SetShotSpeed(playerShotSpeed);
     }
     void resetShot(){
         playerAnimator.SetBool("isShooting", false);
