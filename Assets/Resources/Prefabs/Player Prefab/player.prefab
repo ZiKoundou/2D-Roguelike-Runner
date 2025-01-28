@@ -65,7 +65,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4.3, z: 0.04504037}
-  m_LocalScale: {x: -10, y: 8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5531202021812359099}
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_SortingLayerID: 670959363
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 219091254, guid: e59f048efb580834993d4cf6d0095893, type: 3}
+  m_Sprite: {fileID: -1487535436, guid: 3763753813b41524aa0c31985ed1d61d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -156,9 +156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a4c9a9bad728640bfe9375288f0eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statController: {fileID: 0}
   rb: {fileID: 1094640632376290039}
   horizontal: 0
-  speed: 5
   recoveryForce: 2
   centerYPosition: -4
   yTolerance: 0.5
@@ -327,18 +327,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.010204017, y: -0.071429014}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1.0285715, y: 1.0857143}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.73143387, y: 0.8946996}
   m_EdgeRadius: 0
 --- !u!114 &4727669040876722505
 MonoBehaviour:
@@ -354,7 +354,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 5531202021812359099}
   bullet: {fileID: 3282831710929423007, guid: 20ab9a7615713c74e9cb1ab27bb54de2, type: 3}
-  shotRate: 1
   timer: 0
 --- !u!114 &5266646826692801744
 MonoBehaviour:
@@ -368,6 +367,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ceb5b0feb13ab40bfcfe4e22cd9712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
-  maxHealth: 10
+  statController: {fileID: 0}
   healthbar: {fileID: 0}

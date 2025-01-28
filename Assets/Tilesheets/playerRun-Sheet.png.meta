@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 864854b4532a65a4c93254308362e660
+guid: 3763753813b41524aa0c31985ed1d61d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 11
+  spritePixelsToUnits: 17.5
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,85 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shooting_0
+      name: playerRun-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 16
-        height: 16
+        y: 7
+        width: 18
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 066f14d7fdfaa534cae8b2bdf540c7ba
-      internalID: 955486284
+      spriteID: e377880e30c1d1a44b77c5e35e362168
+      internalID: -1487535436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shooting_1
+      name: playerRun-Sheet_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 18
+        y: 7
+        width: 18
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66e028014741ea440b04d069284d34ea
-      internalID: 824710968
+      spriteID: dd6631ce5dda7354bb8877cd61c7f6a5
+      internalID: -519756659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shooting_2
+      name: playerRun-Sheet_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
+        x: 36
+        y: 7
+        width: 18
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12a406c719517ed44b992d017825a9d4
-      internalID: 711064159
+      spriteID: 5c283b62fb0dd4b45a6d97f11d587926
+      internalID: 1273669110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shooting_3
+      name: playerRun-Sheet_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
+        x: 54
+        y: 7
+        width: 18
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a5940f0a90ed294393d3e12d1c61708
-      internalID: -1375656513
+      spriteID: 760153e09dc3721438caae2449e0af62
+      internalID: -1530578127
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shooting_0: 955486284
-      shooting_1: 824710968
-      shooting_2: 711064159
-      shooting_3: -1375656513
+      playerRun-Sheet_0: -1487535436
+      playerRun-Sheet_1: -519756659
+      playerRun-Sheet_2: 1273669110
+      playerRun-Sheet_3: -1530578127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

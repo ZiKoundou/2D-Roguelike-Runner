@@ -17,7 +17,7 @@ public class Healthbar : MonoBehaviour
         slider.maxValue = maxValue;
         slider.value = currentValue;
         
-        slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low,High,slider.normalizedValue);
+        //slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low,High,slider.normalizedValue);
         //Debug.Log("Slider Normalized Value: " + slider.normalizedValue);
 
     }
