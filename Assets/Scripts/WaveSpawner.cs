@@ -1,58 +1,67 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class WaveSpawner : MonoBehaviour
-{
+public class WaveSpawner : MonoBehaviour{
     // Start is called before the first frame update
     public GameObject Wave;
-    public int maxWaveNumber = 5;
-    // change this number if u want more variation of waves
-    private int waveNumber;
-    //this is the current wave number we are on
-    public float timer = 0;
-    //this is the timer that gets updated each second before spawn rate is called
-    public float spawnRate = 5;
+    public WaveDespawner waveDespawner;
+    public GameObject[] normalWaves;
+    public GameObject[] specialWaves;
 
-    public int waveCount = 0;
+    //public int maxWaveNumber = 5;
+    // change this number if u want more variation of waves
+    
+    //this is the current wave number we are on
+    //public int waveCount;
+    
+    //this is the timer that gets updated each second before spawn rate is called
+    private int waveNumber;
+    public float baseSpawnRate = 5f;
+    public float currentSpawnRate;
+
+    private float decayRate = 0.0025f;
+    
+    private float timer = 0;
+    private float timeSinceLastSpawn;
+    [SerializeField]
+    private float minimumSpawnrate;
     void Start()
     {
-        RandomizeWave("normal");
+        currentSpawnRate = baseSpawnRate;
+        timer = 0;
+        timeSinceLastSpawn = 0;
+        waveNumber = 1;
+        minimumSpawnrate = 0.5f;
     }
 
     // Update is called once per frame
-    void Update()
-{
-    if(timer < spawnRate){
-        timer += Time.deltaTime;
-
-    }else if (waveCount == 2){
-        Instantiate(Wave,transform.position,transform.rotation);
-        RandomizeWave("powerup");
-        waveCount = 0;
-        timer = 0;
-        if(spawnRate >= 2.5f){
-            spawnRate -= 0.5f;
+    void Update(){
+        timeSinceLastSpawn += Time.deltaTime;
+        
+        if (timeSinceLastSpawn >= currentSpawnRate){
+            SpawnWave();
+            timeSinceLastSpawn = 0;
+            timer += currentSpawnRate;
+            currentSpawnRate = baseSpawnRate*Mathf.Exp(-decayRate * timer);
+            currentSpawnRate = Mathf.Max(currentSpawnRate, minimumSpawnrate);
+            waveNumber++;
         }
-
-    } else if (waveCount < 2){
-        Instantiate(Wave,transform.position,transform.rotation);
-        RandomizeWave("normal");
-        waveCount += 1;
-        timer = 0;
     }
-}
 
-void RandomizeWave(string type){
-    if(type == "powerup"){
-        waveNumber = Random.Range(1,maxWaveNumber);
-        Wave = Resources.Load<GameObject>($"Prefabs/WavePrefabs/Wave p{waveNumber}");
-        //put "p" before wave number for the powerup waves
-    }else if (type == "normal"){
-        waveNumber = Random.Range(1,maxWaveNumber);
-        Wave = Resources.Load<GameObject>($"Prefabs/WavePrefabs/Wave {waveNumber}");
+    void SpawnWave(){
+        GameObject waveToSpawn;
+        //if third wave spawn a special wave
+        if (waveNumber % 3 == 0){
+            waveToSpawn = specialWaves[UnityEngine.Random.Range(0, specialWaves.Length)];
+        }else{
+            waveToSpawn = normalWaves[UnityEngine.Random.Range(0, normalWaves.Length)];
+        }
+        Instantiate(waveToSpawn, transform.position, Quaternion.identity);
     }
-    
-}
+
+
+
 }

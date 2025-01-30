@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 599879495740016039, guid: 834dd251c8adc4346a0f5964ae63ab6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.53
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 599879495740016039, guid: 834dd251c8adc4346a0f5964ae63ab6e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -80,7 +80,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2365714378891030247, guid: 46073aef88f7b90408791ca325002632, type: 3}
       propertyPath: m_Name
-      value: Wave p1 Variant
+      value: Wave p2
       objectReference: {fileID: 0}
     - target: {fileID: 6454636429508561282, guid: 46073aef88f7b90408791ca325002632, type: 3}
       propertyPath: m_LocalPosition.x
@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 599879495740016039, guid: 834dd251c8adc4346a0f5964ae63ab6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.53
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 599879495740016039, guid: 834dd251c8adc4346a0f5964ae63ab6e, type: 3}
       propertyPath: m_LocalPosition.z

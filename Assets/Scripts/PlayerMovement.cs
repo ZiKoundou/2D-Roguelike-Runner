@@ -35,11 +35,14 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horizontal * statController.GetMoveSpeed(),0f);
         //Debug.Log(statController.GetMoveSpeed());
         //playerAnimator.speed = speed/5;
+        
+        //flipping
+        /*
         if(!isFacingRight && horizontal > 0f){
             Flip();
         } else if(isFacingRight && horizontal < 0f){
             Flip();
-        }
+        }*/
         if(horizontal == 0){
             playerAnimator.SetBool("isRunning", false);
         }

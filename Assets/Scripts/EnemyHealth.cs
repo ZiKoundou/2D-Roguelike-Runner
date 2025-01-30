@@ -7,8 +7,9 @@ public class EnemyHealth : MonoBehaviour
 {
     public GameObject FloatingTextPrefab;
    
-    public float Health = 2;
-    public float maxHealth = 2;
+    public float Health;
+    public float maxHealth;
+    public float baseHealth = 1;
     public Healthbar healthbar;
 
     
@@ -17,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         healthbar = GetComponentInChildren<Healthbar>();
+        maxHealth = baseHealth * Gamemanager.Instance.Difficulty; 
         Health = maxHealth;
         healthbar.UpdateHealthBar(Health, maxHealth);
         
