@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Enemy 2_Frame_0
     originalName: 
-    pivot: {x: 0.52631575, y: -0.1764706}
+    pivot: {x: 0.5, y: -0.1764706}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 29
-      width: 19
+      y: 4
+      width: 20
       height: 17
     spriteID: a89633ed7ad2da2488216ce043add39e
     spriteBone: []
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 29}
+    uvTransform: {x: 4, y: 4}
   - name: Enemy 2_Frame_1
     originalName: 
     pivot: {x: 0.5, y: -0.1764706}
@@ -149,7 +149,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 29
       width: 20
       height: 17
     spriteID: 4803e729dde12044f9111d5760040888
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 29}
   - name: Enemy 2_Frame_2
     originalName: 
     pivot: {x: 0.52380955, y: -0.1875}
@@ -215,7 +215,7 @@ ScriptedImporter:
       cellRect:
         x: 1
         y: 3
-        width: 19
+        width: 20
         height: 17
       spriteId: a89633ed7ad2da2488216ce043add39e
     - name: Enemy 2_Frame_1
