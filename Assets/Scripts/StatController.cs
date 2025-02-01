@@ -56,6 +56,10 @@ public class statController : MonoBehaviour
         
     }
 
+    public void SetDamage(float Damage){
+        damage = Damage;
+    }
+
     void Start()
     {
         currentHealth = maxHealth;
