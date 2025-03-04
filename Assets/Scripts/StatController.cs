@@ -34,7 +34,7 @@ public class statController : MonoBehaviour
     public float GetMoveSpeed(){
         return moveSpeed;
     }
-    public float GetshotRate(){
+    public float GetShotRate(){
         return shotRate;
     }
     public float GetShotSpeed(){
@@ -60,6 +60,9 @@ public class statController : MonoBehaviour
         damage = Damage;
     }
 
+    public void SetShotSpeed(float ShotSpeed){
+        shotSpeed = ShotSpeed;
+    }
     void Start()
     {
         currentHealth = maxHealth;

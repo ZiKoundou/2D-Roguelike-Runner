@@ -22,7 +22,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shotRate = statController.GetshotRate();
+        shotRate = statController.GetShotRate();
         if(Input.GetKey(KeyCode.Mouse0) && timer<=0 && playerAnimator.GetBool("isShooting") == false){
             
             shoot();

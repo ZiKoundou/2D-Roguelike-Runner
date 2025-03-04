@@ -23,7 +23,7 @@ public class ShotRateDisplay : MonoBehaviour
 
     void shotRateUpdate(){
          //turn text into speed string
-        shotRate = statController.GetshotRate();
+        shotRate = statController.GetShotRate();
         //get speed in statcontroller
         Text.text = string.Format($"ShotRate: <color=black>{shotRate.ToString()}</color>");
     }
